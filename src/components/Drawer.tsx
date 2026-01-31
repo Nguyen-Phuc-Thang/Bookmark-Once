@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import '../css/components/Drawer.css';
-import { addSession, updateSession, deleteSession } from '../database/sessionRepo';
+import { addSession, updateSession } from '../database/sessionRepo';
 import type { Link } from '../database/linksRepo';
 
 interface DrawerProps {
@@ -14,7 +14,7 @@ interface DrawerProps {
     onDeleteSessionClick?: (sessionTitle: string) => void;
 }
 
-export default function Drawer({ isOpen, onClose, mode, onSessionAdd, onSessionUpdate, onSessionDelete, currentSession, onDeleteSessionClick }: DrawerProps) {
+export default function Drawer({ isOpen, onClose, mode, onSessionAdd, onSessionUpdate, currentSession, onDeleteSessionClick }: DrawerProps) {
     const [title, setTitle] = useState("");
     const [isPermanent, setIsPermanent] = useState(false);
     const [hours, setHours] = useState("");

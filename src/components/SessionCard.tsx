@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import { deleteSession } from "../database/sessionRepo";
-
 import '../css/components/SessionCard.css';
 import '../global/global.css';
 
