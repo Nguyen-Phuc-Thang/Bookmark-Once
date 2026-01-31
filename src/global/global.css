@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-background: #F5E9D6;
+    --color-surface: #EFE0C3;
+    --color-primary: #8B5E3C;
+    --color-secondary: #C19A6B;
+    --color-accent: #6B4E3D;
+    --color-text-primary: #3E2C1C;
+    --color-text-secondary: #6F5B3E;
+    --color-border: #D6C3A3;
+    --font-primary: 'Libre Baskerville', serif;
+    --font-heading: 'Playfair Display', serif;
+}
+
+
+/* CSS Reset */

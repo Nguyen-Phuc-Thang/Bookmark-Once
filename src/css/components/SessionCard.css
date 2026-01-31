@@ -1,0 +1,100 @@
+.session-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 18px 20px;
+    min-width: 280px;
+    max-width: 420px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 18px;
+    /* box-shadow: 0 12px 32px rgba(62, 44, 28, 0.12), 0 2px 6px rgba(62, 44, 28, 0.08); */
+    color: var(--color-text-primary);
+    font-family: var(--font-primary);
+    cursor: pointer;
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
+    overflow: hidden;
+}
+
+.session-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    pointer-events: none;
+}
+
+.session-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-primary);
+}
+
+.session-card:active {
+    transform: translateY(-1px);
+}
+
+.session-card:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+}
+
+.session-card>p:first-of-type {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    letter-spacing: 0.02em;
+    color: var(--color-primary);
+}
+
+.session-card>p:nth-of-type(2) {
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    font-weight: 600;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background: var(--color-border);
+    margin: 2px 0 6px;
+}
+
+.session-link {
+    position: relative;
+    padding: 3px 0;
+    transition: color 160ms ease;
+}
+
+.session-link+.session-link {
+    margin-top: 0;
+}
+
+.session-link::before {
+    content: "";
+    display: none;
+}
+
+.session-link:hover {
+    color: var(--color-primary);
+}
+
+.session-link p {
+    margin: 0;
+    font-size: 0.97rem;
+    font-weight: 500;
+    color: var(--color-secondary);
+    line-height: 1rem;
+}
+
+@media (max-width: 480px) {
+    .session-card {
+        padding: 16px;
+        gap: 8px;
+    }
+
+    .session-link {
+        padding: 11px 12px 11px 16px;
+    }
+}
