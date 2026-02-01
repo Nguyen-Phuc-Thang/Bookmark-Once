@@ -6,7 +6,7 @@ export default function UserGuide() {
     return (
         <div className="guide-page">
             <h1 className="guide-title">User Guide</h1>
-            <div style={{ width: '90%' }}>
+            <div className="markdown">
                 <ReactMarkDown>{guideContent}</ReactMarkDown>
             </div>
         </div>

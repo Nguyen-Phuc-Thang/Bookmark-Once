@@ -1,0 +1,36 @@
+.help-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: var(--color-primary, #007bff);
+    color: white;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.help-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    background-color: var(--color-primary-dark, #0056b3);
+}
+
+.help-button:active {
+    transform: scale(0.95);
+}
+
+.help-button .help-icon {
+    line-height: 1;
+}

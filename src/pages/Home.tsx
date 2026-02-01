@@ -6,6 +6,7 @@ import Drawer from "../components/Drawer";
 import AddLinkOverlay from "../components/AddLinkOverlay";
 import DeleteLinkOverlay from "../components/DeleteLinkOverlay";
 import DeleteSessionOverlay from "../components/DeleteSessionOverlay";
+import HelpButton from "../components/HelpButton";
 import { getAllLinks, deleteLink, type Link } from "../database/linksRepo";
 import { getAllSessions, deleteSession } from "../database/sessionRepo";
 
@@ -212,6 +213,7 @@ export default function Home() {
                 onCancel={closeDeleteSessionOverlay}
                 onDelete={confirmDeleteSession}
             />
+            <HelpButton onClick={() => window.open('/user-guide', '_blank')} />
         </div>
     );
 }
