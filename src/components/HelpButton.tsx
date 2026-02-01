@@ -10,7 +10,7 @@ export default function HelpButton({ onClick }: HelpButtonProps) {
 
     return (
         <button
-            className="help-button"
+            className={`help-button${isHovered ? " hovered" : ""}`}
             onClick={onClick}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
